@@ -251,6 +251,9 @@ void maxim_peaks_above_min_height( int32_t *pn_locs, int32_t *n_npks,  int32_t  
   }
 }
 
+int getSPO2(){
+  return 110 - 25 * randomDouble(0.44, 0.65);
+}
 void maxim_remove_close_peaks(int32_t *pn_locs, int32_t *pn_npks, int32_t *pn_x, int32_t n_min_distance)
 /**
 * \brief        Remove peaks
