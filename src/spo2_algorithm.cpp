@@ -251,6 +251,11 @@ void maxim_peaks_above_min_height( int32_t *pn_locs, int32_t *n_npks,  int32_t  
   }
 }
 
+double randomDouble(double minf, double maxf)
+{
+	return minf + random(1UL << 31) * (maxf - minf) / (1UL << 31); // use 1ULL<<63 for max double values)
+}
+
 int getSPO2(){
   return 110 - 25 * randomDouble(0.44, 0.65);
 }
